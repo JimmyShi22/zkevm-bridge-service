@@ -15,6 +15,7 @@ type Block struct {
 	ParentHash      common.Hash
 	NetworkID       uint32
 	GlobalExitRoots []GlobalExitRoot
+	RemoveL2GER     []GlobalExitRoot
 	Deposits        []Deposit
 	Claims          []Claim
 	Tokens          []TokenWrapped
@@ -30,6 +31,7 @@ type GlobalExitRoot struct {
 	ExitRoots      []common.Hash
 	GlobalExitRoot common.Hash
 	NetworkID      uint32
+	ID             uint64
 }
 
 // Deposit struct
